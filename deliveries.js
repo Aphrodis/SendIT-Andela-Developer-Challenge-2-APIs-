@@ -3,6 +3,11 @@ const expressValidator = require('express-validator');
 const bodyParser = require('body-parser'); 
 const app = express();
 app.use(bodyParser.json());
+
+
+app.get('/',(req,res)=>{
+	res.redirect("/api/v1/parcels");
+});
 const parcels = [
 	{id: 1, owner: 'Aphrodice', pickup:'Rwanda', destination: 'Ghana', weight: 12, price: 14400},
 	{id: 2, owner: 'Ariel', pickup:'Nigeria', destination: 'DRC', weight: 7, price: 12800},
