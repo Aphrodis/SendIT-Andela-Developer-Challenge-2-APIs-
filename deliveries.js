@@ -69,7 +69,6 @@ app.get('/api/v1/users/:owner', (req, res)=>{
 
 
 //Cancelling the specific parcel delivery order
-
 app.put('/api/v1/parcels/:id/cancel', (req, res)=>{
 	const updatedOrders = parcels.find(c=> c.id === parseInt(req.params.id));
 	if(!updatedOrders) return res.status(404).send('The parcel with that Id was not found');
